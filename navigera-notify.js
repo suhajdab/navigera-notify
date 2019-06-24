@@ -43,10 +43,14 @@
                 reject("Navigera Notification not available. This browser does not support desktop notification.")
             } else if (Notification.permission === "granted") {
                 resolve();
+            } else if (Notification.permission == "denied") {
+                reject('Permission for Notification denied by user.');
             } else if (Notification.permission !== "denied") {
                 Notification.requestPermission().then(function (permission) {
                     if (permission === "granted") {
                         resolve();
+                    } else {
+                        reject('Permission for Notification denied by user.');
                     }
                 });
             }
