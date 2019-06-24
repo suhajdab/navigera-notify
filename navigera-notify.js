@@ -26,7 +26,7 @@
             <label style="white-space: nowrap">
                 <input type="checkbox"/>Notify
             </label>
-            <output style="display: block; font-size: 0.7rem; border: 1px solid #ccc; padding: 0.2rem; margin-top: 0.5rem; color: #333;"/>
+            <output style="display: block; font-size: 0.7rem; border: 1px solid #ccc; padding: 0.2rem; margin-top: 0.5rem; background: #fafafa; color: #333;"/>
             </fieldset>`;
         tmpl.content.querySelector('input').addEventListener('click', handleCheckbox);
         output_el = tmpl.content.querySelector('output');
